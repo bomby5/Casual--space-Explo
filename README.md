@@ -1,2 +1,2 @@
 # Casual--space-Explo
-Simple tool i created, inputing a J-Tag will open anoik.is page :)
+WIP tool to search all the eve websites for info on your system :)
