@@ -1,20 +1,38 @@
+#anoikis exploration help tool
+#by bomby_5#0001
+#feel free to do whatever you want with this
+#just credit me
+#thanks :)
+
 URL = "http://anoik.is/systems/"
-ZURL = "https://zkillboard.com/system/"
+dURL = "http://evemaps.dotlan.net/system/"
+zkURL = "https://zkillboard.com/system/"
 import time as t
 import webbrowser as w
 
-while True:
-    system = input("")
-    if system.lower() == "thera":
-        w.open("http://anoik.is/systems/Thera")
-    elif len(system) != 7:
-        print("Invalid System Name")
-        continue
-    elif system[0].lower() != "j":
-        print ("Invalid System Name")
-        continue
-    else:
-        fURL = (URL+system.upper())
+def openSystem(systemname):
+    if systemname == "Thera":
+        fURL = (URL+"Thera")
+        f_d_URL = (dURL+"Thera")
+        w.open(f_d_URL)
         w.open(fURL)
-        t.sleep(0.5)
+    elif systemname[0].lower() != "j" or len(systemname) != 7:
+        f_d_URL = (dURL+systemname)
+        w.open(f_d_URL)
+    else:
+        fURL = (URL+systemname.upper())
+        f_d_URL = (dURL+systemname.upper())
+        w.open(f_d_URL)
+        w.open(fURL)
 
+
+print("Ctrl+C to exit")
+try:
+    while True:
+        t.sleep(0.5)
+        system = input("")
+        openSystem(system)
+#TODO: Zkill Integration(how do i convert systems to system ids)
+
+except KeyboardInterrupt:
+    print("Exiting")
