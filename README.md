@@ -1,4 +1,4 @@
 # Casual--space-Explo
-WIP tool to search all the eve websites for info on your system :)
+WH tool to search Ellatha, Anoik.is, ZKillboard, and Dotlan for information on your current system. Also works in K-space for just dotlan and ZKB. Enjoy!
 
-just paste the system name into the CMD line and hit enter!
+just paste the system name into the text box and press enter
